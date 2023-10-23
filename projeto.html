@@ -4,40 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Portifólio Pessoal</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
         }
 
         header {
-            background-color: #173c18;
-            padding: 5px;
             text-align: center;
-            color: white;
+            padding: 5px 0;
+        }
+
+        header h1 {
+            margin: 5px 0;
+        }
+
+        header img {
+            display: block;
+            margin: auto;
+            max-height: 500px;
         }
 
         nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center; /* Centraliza os links verticalmente */
+        }
+
+        nav li {
+            margin: 20px 0; /* Adiciona espaço entre os links verticalmente */
         }
 
         nav a {
             text-decoration: none;
-            color: white;
-            margin: 0 15px;
-        }
-
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 8px;
+            color: #ffffff;
+            font-weight: bold;
         }
 
         footer {
@@ -60,40 +70,50 @@
 </head>
 
 <body>
-    
     <header>
-        <h1>Projetos</h1>
+        <h1>Meu Portfólio Pessoal</h1>
+        <img src="imagens/DSC_0074.jpg" height="500" alt="Imagem do Portfólio">
+        <nav>
+            <ul>
+                <li><button onclick="openPage('sobre mim.html')">Sobre Mim</button></li>
+                <li><button onclick="openPage('minha formação.html')">Formação Educacional</button></li>
+                <li><button onclick="openPage('projeto.html')">Projeto</button></li>
+                <li><button onclick="openPage('contatos.html')">Contato</button></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#Projetos"></a>
-        <a href="primeiro contato com https e css.html">Passagens Aéreas</a>
-        <a href="pizzaria.html">Cadastro Pizzaria</a>
-        <!-- Adicione mais links conforme necessário -->
-    </nav>
+    <main id="content">
+        <!-- O conteúdo da página será carregado aqui -->
+    </main>
 
-    <section id="Projeto">
-        <h2>Meus Projetos</h2>
-        <p>Nos links acima estão dois dos meus projetos que desenvolvi ao longo do curso.</p>
-    </section>
+    <script src="script.js"></script>
 
     <footer>
         <p>&copy; 2023 Wallisson Ruan Santos Feliciano</p>
     </footer>
 
-    
      <!-- Botão de Página Inicial -->
      <a href="#" class="home-button" onclick="goHome()">Página Inicial</a>
-    
+
      <script>
-         // Função para voltar à página inicial
-         function goHome() {
-             window.location.href = "index.html"; // Substitua com o caminho correto para sua página inicial
-         }
-     </script>
-    
-    </html>
-    
+        // Função para voltar à página inicial
+        function goHome() {
+            window.location.href = "index.html"; // Substitua com o caminho correto para sua página inicial
+        }
+    </script>
+
+    <script>
+        function openPage(url) {
+            window.location.href = url;
+        }
+
+        function goHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+
 </body>
 
 </html>
+
